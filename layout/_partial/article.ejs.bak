@@ -1,0 +1,48 @@
+<article class="<%= item.layout %>">
+  <% if (item.photos){ %>
+    <%- partial('post/gallery') %>
+  <% } %>
+  <div class="post-content">
+    <header>
+      <% if (item.layout != 'page'){ %>
+      <%- partial('post/title') %>
+      <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%- full_date(item.date, config.full_format) %></a></time>
+      <% } %>
+    </header>
+    <div class="entry">
+      <% if (item.excerpt && index){ %>
+        <%- item.excerpt %>
+      <% } else { %>
+        <%- item.content %>
+      <% } %>
+    </div>
+    <footer>
+      <% if (index){ %>
+        <div class="alignleft">
+            <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= theme.excerpt_link %></a>
+        </div>
+        <% if (item.comment && config.disqus_shortname){ %>
+          <div class="alignleft">
+            <a href="<%- item.permalink %>#disqus_thread" class="comment-link">Comments</a>
+          </div>
+        <% } %>
+        <% if (theme.comment_provider == "duoshuo"){ %>
+          <div class="alignleft"> 
+            <span class="ds-thread-count" data-thread-key="<%- config.root %><%- item.path%>">&nbsp;
+            </span>
+          </div>
+        <% } %>
+      <% } else { %>
+          <%- partial('post/category') %>
+          <%- partial('post/tag') %>
+      <% } %>
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<% if (!index){ %>
+  <div id="profile"></div>
+<% } %>
+
+<%- partial('comment') %>

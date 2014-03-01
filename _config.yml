@@ -1,0 +1,37 @@
+menu:
+  Home: /
+  Archives: /archives
+  Demo: /demos
+  Flickr: /flickr
+widgets:
+- search
+- category
+- tagcloud
+
+cover:
+  enable: true
+  url: /bg.jpeg
+  # url: http://t.aopod.com/b
+
+excerpt_link: Read More
+
+full_format: 'ddd, MMM D YYYY, H:mm:ss a'
+
+fancybox: true
+
+google_analytics: UA-36877105-X
+rss:
+
+comment_provider: duoshuo
+
+# Duoshuo comment
+duoshuo:
+  short_name: stddup
+
+social:
+  github: https://github.com/hizhi
+  weibo: http://weibo.com/samedie
+  google_plus: 
+
+auto_change:
+  enable: true

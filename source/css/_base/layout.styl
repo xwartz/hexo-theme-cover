@@ -1,0 +1,92 @@
+*
+  margin 0
+  padding 0
+
+body
+  background color-background
+  color color-font
+  font-family font-default
+  font-size 14px
+  text-shadow 0 0 1px transparent
+  @media screen and (max-width: 600px)
+    font-size 13px
+
+h1, h2, h3, h4, h5, h6
+  font-family font-title
+
+h1
+  font-size 1.8em
+
+h2
+  font-size 1.5em
+
+h3
+  font-size 1.3em
+.fa
+  display inline
+a
+  text-decoration none
+  color color-link
+  &:hover
+    text-decoration none
+
+p
+  text-indent 0em
+
+.alignleft
+  float left
+
+.alignright
+  float right
+
+.clearfix
+  clearfix()
+
+.container 
+  @media screen and (min-width: 1200px)
+    width page-width
+
+.more-link
+  .fa 
+    margin-right 10px
+
+.categories, .tags
+  position relative
+  margin-bottom 5px
+  a, i 
+    color color-meta
+  a  
+    &:hover
+      color color-link
+      text-decoration none
+
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track-piece:start{
+  background: rgba(9,154,203,0.9);
+}
+::-webkit-scrollbar-track-piece:end{
+  background: rgba(153,153,153,0.5);
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(9,154,203,0.9);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+::selection{
+  background: #F55A5A;
+  color: #fff;
+  text-shadow: none;
+}

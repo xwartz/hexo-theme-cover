@@ -1,0 +1,47 @@
+<article class="<%= item.layout %>">
+ 
+  <div class="post-content">
+    <header>
+      <div class="icon"></div>
+      <% if (item.layout != 'page'){ %>
+      <%- partial('post/title') %>
+      <% } %>
+    </header>
+    <% if (item.photos){ %>
+      <%- partial('post/gallery') %>
+    <% } %>
+    <div class="entry">
+      <% if (item.excerpt && index){ %>
+        <%- item.excerpt %>
+      <% } else { %>
+        <%- item.content %>
+      <% } %>
+    </div>
+    <footer>
+      <% if (index){ %>
+        <div class="alignleft">
+            <a href="<%- config.root %><%- item.path %>#more" class="more-link"><i class="fa fa-chevron-right"></i><%= theme.excerpt_link %></a>
+        </div>
+        <% if (item.comment && config.disqus_shortname){ %>
+          <div class="alignleft">
+            <a href="<%- item.permalink %>#disqus_thread" class="comment-link">Comments</a>
+          </div>
+        <% } %>
+        <% if (theme.comment_provider == "duoshuo"){ %>
+          <div class="alignleft"> 
+            <span class="ds-thread-count" data-thread-key="<%- config.root %><%- item.path%>">&nbsp;
+            </span>
+          </div>
+        <% } %>
+      <% } else { %>
+          <%- partial('post/category') %>
+          <%- partial('post/tag') %>
+          <div class="clearfix"></div>
+          <%- partial('_partial/pagination', {article: true}) %>
+      <% } %>
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+<%- partial('comment') %>
