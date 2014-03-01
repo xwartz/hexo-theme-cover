@@ -4,23 +4,22 @@ A chic Hexo theme with facebook-like cover photo. Forked from [Writing](https://
 
 ## Demo
 
-[demo site](http://daisygao.com)
+[viewport](http://stddup.me/)
+
+
+
+[原作者](http://daisygao.com)
 
 Index page - cover, with social site links integrated:
 ![](http://ww2.sinaimg.cn/large/6cea169fjw1edhzrl42srj21400jnk2r.jpg)
 
-Index page - blog:
-![](http://ww1.sinaimg.cn/large/6cea169fjw1edhzsngsyjj213l0jmtbu.jpg)
-
-Post page, with pagination, share module and comment module integrated:
-![](http://ww1.sinaimg.cn/large/6cea169fjw1edhzude2koj21400jn40v.jpg)
 
 ## Features
   - Dynamically-resized facebook-like cover photo displayed on index page, backed by [Anystretch](https://github.com/danmillar/jquery-anystretch).  
   - Mobile-optimized by using Twitter bootstrap.
   - Dynamically-fixed nav-bar design.
   - Beautiful profile design with logo, social site links.
-  - Duoshuo comment widget and Jiathis share widget integrated (CSS-hack involved!), friendly for Chinese users.
+  - Duoshuo comment widget
   - Newer and older posts pagination support.
 
 ## Install
@@ -29,7 +28,7 @@ Execute the following command and modify `theme` in `_config.yml` to `cover`.
 
 ```
 cd your-hexo-dir
-git clone https://github.com/daisygao/hexo-themes-cover.git themes/cover
+git clone https://github.com/hizhi/hexo-theme-cover.git themes/cover
 ```
 
 ## Update
@@ -55,19 +54,11 @@ widgets:
 
 cover:
   enable: true
-  url: http://ww1.sinaimg.cn/large/6cea169fjw1edgyzma1xcj21kw16ohba.jpg
+  url: background-img.jpg
    
 excerpt_link: Read More
 
-full_format: 'ddd, MMM D YYYY, h:mm:ss a'
-
-addthis:
-  enable: true
-  pubid:
-  facebook:
-  twitter:
-  google: true
-  pinterest:
+full_format: 'ddd, MMM D YYYY, H:mm:ss a'
 
 fancybox: true
 

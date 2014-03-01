@@ -1,6 +1,6 @@
 (function ($) {
 	var arr_menu = $('#main-nav').find('a');
-	var pattern0 = /\./g,
+	var pattern0 = /\.me\/$/g,
 	    pattern1 = /archives/g,
 	    pattern2 = /demos/g,
 	    pattern3 = /flickr/g;
