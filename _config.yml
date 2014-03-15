@@ -3,6 +3,7 @@ menu:
   Archives: /archives
   Demo: /demos
   Flickr: /flickr
+  # rss: /atom.xml
 widgets:
 - search
 - category
