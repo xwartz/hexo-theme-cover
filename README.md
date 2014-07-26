@@ -4,7 +4,7 @@ A chic Hexo theme with facebook-like cover photo. Forked from [Writing](https://
 
 ## Demo
 
-[demo site](http://daisygao.com)
+[demo site](http://stddup.me)
 
 Index page - cover, with social site links integrated:
 ![](http://ww2.sinaimg.cn/large/6cea169fjw1edhzrl42srj21400jnk2r.jpg)
